@@ -7,7 +7,7 @@ const Hero = () => {
             <img src={heroimg} alt="" />
             <h2 className='font-bold text-2xl text-white'>Assemble Your Ultimate Dream 11 Cricket Team</h2>
             <p className='text-white/90'>Beyond Boundaries Beyond Limits</p>
-            <button className='btn btn-primary'>Claim Free Credit</button>
+            <button className='btn  btn-soft btn-success'>Claim Free Credit</button>
         </div>
     </div>
   )

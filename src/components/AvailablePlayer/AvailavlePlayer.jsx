@@ -17,8 +17,8 @@ const AvailavlePlayer = ({ data }) => {
                     </h2>
                     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
                     <div className="card-actions justify-end">
-                        <div className="badge badge-outline">Fashion</div>
-                        <div className="badge badge-outline">Products</div>
+                        <div className="btn btn-outline btn-success">Add</div>
+                        <div className="btn btn-outline btn-error">Remove</div>
                     </div>
                 </div>
             </div>
