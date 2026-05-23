@@ -3,18 +3,16 @@ import AvailavlePlayer from "./AvailablePlayer/AvailavlePlayer";
 
 const Player = ({ playerPromise }) => {
   const data = use(playerPromise);
-  // console.log(data);
 
   return (
-    <div className='mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8 place-items-center'>
-      {
-        data.map((avPlayer, index) => (
-          <AvailavlePlayer data={avPlayer} key={index}></AvailavlePlayer>
-        )
-        )
-      }
+    <div className="w-full px-4 sm:px-6 lg:px-10 py-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {data.map((avPlayer, index) => (
+          <AvailavlePlayer key={index} data={avPlayer} />
+        ))}
+      </div>
     </div>
-  )
+  );
 };
 
 export default Player;
