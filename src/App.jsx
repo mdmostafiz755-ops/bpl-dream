@@ -16,7 +16,7 @@ function App() {
     <>
       <Navbar coin={coin}></Navbar>
       <Hero></Hero>
-      <Suspense fallback={<span class="loading loading-spinner text-primary"></span>}>
+      <Suspense fallback={<span class="loading loading-spinner text-primary grid justify-center items-center mx-auto h-screen"></span>}>
         <Player playerPromise={playerPromise} setCoin={setCoin} coin={coin}></Player>
       </Suspense>
     </>
