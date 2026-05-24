@@ -2,7 +2,7 @@ import { use, useState } from "react";
 import AvailavlePlayer from "./AvailablePlayer/AvailavlePlayer";
 import SelectedPlayer from "./selectedPlayer/SelectedPlayer";
 
-const Player = ({ playerPromise }) => {
+const Player = ({ playerPromise,setCoin,coin }) => {
   const data = use(playerPromise);
 
   // true = Available, false = Selected
@@ -42,7 +42,7 @@ const Player = ({ playerPromise }) => {
       {
         isAvailable ? <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {data.map((avPlayer, index) => (
-          <AvailavlePlayer key={index} data={avPlayer} />
+          <AvailavlePlayer key={index} data={avPlayer} setCoin={setCoin} coin={coin} />
         ))}
       </div> : <SelectedPlayer></SelectedPlayer> 
       }

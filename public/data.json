@@ -6,7 +6,7 @@
     "rating": 9.5,
     "battingStyle": "Right-hand bat",
     "bowlingStyle": "Right-arm medium",
-    "price": 12.5,
+    "price": 10000,
     "playerImage": "https://i.ibb.co.com/BVRhkCFR/1938706-gv-dmoxkaaz9is.webp"
   },
   {
@@ -16,7 +16,7 @@
     "rating": 9.2,
     "battingStyle": "Right-hand bat",
     "bowlingStyle": "Right-arm offbreak",
-    "price": 11.0,
+    "price": 15000,
     "playerImage": "https://i.ibb.co.com/BVRhkCFR/1938706-gv-dmoxkaaz9is.webp"
   },
   {
@@ -26,7 +26,7 @@
     "rating": 9.0,
     "battingStyle": "Left-hand bat",
     "bowlingStyle": "Right-arm fast-medium",
-    "price": 10.5,
+    "price": 10050,
     "playerImage": "https://i.ibb.co.com/BVRhkCFR/1938706-gv-dmoxkaaz9is.webp"
   },
   {
@@ -36,7 +36,7 @@
     "rating": 8.8,
     "battingStyle": "Right-hand bat",
     "bowlingStyle": "Right-arm offbreak",
-    "price": 10.0,
+    "price": 10000,
     "playerImage": "https://i.ibb.co.com/BVRhkCFR/1938706-gv-dmoxkaaz9is.webp"
   },
   {
@@ -46,7 +46,7 @@
     "rating": 9.3,
     "battingStyle": "Right-hand bat",
     "bowlingStyle": "Right-arm fast",
-    "price": 11.5,
+    "price": 12000,
     "playerImage": "https://i.ibb.co.com/BVRhkCFR/1938706-gv-dmoxkaaz9is.webp"
   }
 ]

@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../assets/logo.png";
 import { Coins } from "lucide-react";
 
-const Navbar = () => {
+const Navbar = ({coin}) => {
   return (
     <div className="navbar bg-base-100 px-4">
       
@@ -55,7 +55,7 @@ const Navbar = () => {
       {/* END */}
       <div className="navbar-end">
         <button className="btn btn-outline btn-success flex items-center gap-2">
-          4300 Coins <Coins size={18} />
+          {coin} Coins <Coins size={18} />
         </button>
       </div>
     </div>

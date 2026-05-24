@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const AvailavlePlayer = ({ data }) => {
+const AvailavlePlayer = ({ data, setCoin, coin }) => {
     const [added, setAdded] = useState(false);
 
     const handleToggle = () => {
@@ -23,6 +23,7 @@ const AvailavlePlayer = ({ data }) => {
 
                     <h2 className="card-title text-base sm:text-lg flex-wrap gap-2">
                         {data.playerName}
+
                         <div className="badge badge-secondary">
                             {data.playerCountry}
                         </div>
@@ -40,7 +41,15 @@ const AvailavlePlayer = ({ data }) => {
                                     ? "btn-outline btn-error"
                                     : "btn-outline btn-success"
                             }`}
-                            onClick={handleToggle}
+                            onClick={() => {
+                                handleToggle();
+
+                                if (!added) {
+                                    setCoin(prev => prev - data.price);
+                                } else {
+                                    setCoin(prev => prev + data.price);
+                                }
+                            }}
                         >
                             {added ? "Remove" : "Add"}
                         </button>
