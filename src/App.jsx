@@ -11,7 +11,7 @@ const fetchPlayer = async () => {
 }
 function App() {
   const playerPromise = fetchPlayer();
-  const [coin,setCoin]=useState(50000)
+  const [coin,setCoin]=useState(10000000)
   return (
     <>
       <Navbar coin={coin}></Navbar>

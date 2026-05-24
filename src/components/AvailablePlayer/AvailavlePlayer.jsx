@@ -1,10 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 const AvailavlePlayer = ({ data, setCoin, coin }) => {
     const [added, setAdded] = useState(false);
 
-    const handleToggle = () => {
-        setAdded(prev => !prev);
+    const handleClick = () => {
+        const willAdd = !added;
+
+        
+        if (willAdd && coin < data.price) {
+            alert("Insufficient Coins");
+            return;
+        }
+
+        
+        setAdded(willAdd);
+
+        setCoin(prev =>
+            willAdd ? prev - data.price : prev + data.price
+        );
     };
 
     return (
@@ -30,8 +43,7 @@ const AvailavlePlayer = ({ data, setCoin, coin }) => {
                     </h2>
 
                     <p className="text-sm text-base-content/70">
-                        A card component has a figure, a body part,
-                        and inside body there are title and actions parts
+                        {data.description || "Player profile information"}
                     </p>
 
                     <div className="card-actions justify-end mt-2">
@@ -41,15 +53,7 @@ const AvailavlePlayer = ({ data, setCoin, coin }) => {
                                     ? "btn-outline btn-error"
                                     : "btn-outline btn-success"
                             }`}
-                            onClick={() => {
-                                handleToggle();
-
-                                if (!added) {
-                                    setCoin(prev => prev - data.price);
-                                } else {
-                                    setCoin(prev => prev + data.price);
-                                }
-                            }}
+                            onClick={handleClick}
                         >
                             {added ? "Remove" : "Add"}
                         </button>
@@ -58,7 +62,7 @@ const AvailavlePlayer = ({ data, setCoin, coin }) => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default AvailavlePlayer
+export default AvailavlePlayer;
