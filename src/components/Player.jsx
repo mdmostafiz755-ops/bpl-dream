@@ -1,5 +1,6 @@
 import { use, useState } from "react";
 import AvailavlePlayer from "./AvailablePlayer/AvailavlePlayer";
+import SelectedPlayer from "./selectedPlayer/SelectedPlayer";
 
 const Player = ({ playerPromise }) => {
   const data = use(playerPromise);
@@ -38,11 +39,14 @@ const Player = ({ playerPromise }) => {
       </div>
 
       {/* Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {
+        isAvailable ? <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {data.map((avPlayer, index) => (
           <AvailavlePlayer key={index} data={avPlayer} />
         ))}
-      </div>
+      </div> : <SelectedPlayer></SelectedPlayer> 
+      }
+      
     </div>
   );
 };
