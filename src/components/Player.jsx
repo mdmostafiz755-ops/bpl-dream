@@ -45,7 +45,7 @@ const Player = ({ playerPromise,setCoin,coin }) => {
           <AvailavlePlayer key={index} data={avPlayer} setCoin={setCoin} coin={coin} 
           setSelectedPlayer={setSelectedPlayer} selectedPlayer={selectedPlayer}/>
         ))}
-      </div> : <SelectedPlayer selectedPlayer={selectedPlayer} setSelectedPlayer={setSelectedPlayer}></SelectedPlayer> 
+      </div> : <SelectedPlayer selectedPlayer={selectedPlayer} setSelectedPlayer={setSelectedPlayer} coin={coin} setCoin={setCoin}></SelectedPlayer> 
       }
       
     </div>

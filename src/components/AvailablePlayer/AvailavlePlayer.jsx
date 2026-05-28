@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const AvailavlePlayer = ({ data, setCoin, coin,setSelectedPlayer,selectedPlayer }) => {
     const [added, setAdded] = useState(false);
@@ -8,7 +9,7 @@ const AvailavlePlayer = ({ data, setCoin, coin,setSelectedPlayer,selectedPlayer 
 
 
         if (willAdd && coin < data.price) {
-            alert("Insufficient Coins");
+            toast.error("Insufficient Coins");
             return;
         }
 
