@@ -1,25 +1,26 @@
 import React, { useState } from "react";
 
-const AvailavlePlayer = ({ data, setCoin, coin }) => {
+const AvailavlePlayer = ({ data, setCoin, coin,setSelectedPlayer,selectedPlayer }) => {
     const [added, setAdded] = useState(false);
 
     const handleClick = () => {
         const willAdd = !added;
 
-        
+
         if (willAdd && coin < data.price) {
             alert("Insufficient Coins");
             return;
         }
 
-        
+
         setAdded(willAdd);
 
         setCoin(prev =>
             willAdd ? prev - data.price : prev + data.price
         );
+        setSelectedPlayer([...selectedPlayer,data]);
     };
-
+   
     return (
         <div className="w-full">
             <div className="card bg-base-100 w-full shadow-md">
@@ -48,11 +49,10 @@ const AvailavlePlayer = ({ data, setCoin, coin }) => {
 
                     <div className="card-actions justify-end mt-2">
                         <button
-                            className={`btn btn-sm sm:btn-md ${
-                                added
+                            className={`btn btn-sm sm:btn-md ${added
                                     ? "btn-outline btn-error"
                                     : "btn-outline btn-success"
-                            }`}
+                                }`}
                             onClick={handleClick}
                         >
                             {added ? "Remove" : "Add"}
